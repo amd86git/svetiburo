@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — SvetiDecor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">sveti decor</a>
+            
+            <!-- Desktop Nav -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="projects.html" class="nav-link active">projects</a>
+                <a href="about.html" class="nav-link">about us</a>
+                <a href="contacts.html" class="nav-link">contacts</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle - TEXT instead of hamburger -->
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span class="menu-toggle-text">MENU</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu - Dropdown -->
+    <div class="mobile-menu">
+        <nav class="nav-mobile">
+            <a href="index.html" class="mobile-nav-link">home</a>
+            <a href="projects.html" class="mobile-nav-link active">projects</a>
+            <a href="about.html" class="mobile-nav-link">about us</a>
+            <a href="contacts.html" class="mobile-nav-link">contacts</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="projects-main">
+        <div class="gallery-container">
+            
+            <!-- Project 1 -->
+            <div class="project-item" data-project="project-1">
+                <img src="images/projects/project-1/thumb.jpg" alt="Project 1" class="project-thumb" style="width: 357px;">
+                <div class="project-gallery-data" style="display: none;">
+                    <img src="images/projects/project-1/01.jpg" alt="Project 1 - Image 1">
+                    <img src="images/projects/project-1/02.jpg" alt="Project 1 - Image 2">
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item" data-project="project-2">
+                <img src="images/projects/project-2/thumb.jpg" alt="Project 2" class="project-thumb" style="width: 357px;">
+                <div class="project-gallery-data" style="display: none;">
+                    <img src="images/projects/project-2/01.jpg" alt="Project 2 - Image 1">
+                    <img src="images/projects/project-2/02.jpg" alt="Project 2 - Image 2">
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item" data-project="project-3">
+                <img src="images/projects/project-3/thumb.jpg" alt="Project 3" class="project-thumb" style="width: 357px;">
+                <div class="project-gallery-data" style="display: none;">
+                    <img src="images/projects/project-3/01.jpg" alt="Project 3 - Image 1">
+                    <img src="images/projects/project-3/02.jpg" alt="Project 3 - Image 2">
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-item" data-project="project-4">
+                <img src="images/projects/project-4/thumb.jpg" alt="Project 4" class="project-thumb" style="width: 357px;">
+                <div class="project-gallery-data" style="display: none;">
+                    <img src="images/projects/project-4/01.jpg" alt="Project 4 - Image 1">
+                    <img src="images/projects/project-4/02.jpg" alt="Project 4 - Image 2">
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-item" data-project="project-5">
+                <img src="images/projects/project-5/thumb.jpg" alt="Project 5" class="project-thumb" style="width: 357px;">
+                <div class="project-gallery-data" style="display: none;">
+                    <img src="images/projects/project-5/01.jpg" alt="Project 5 - Image 1">
+                    <img src="images/projects/project-5/02.jpg" alt="Project 5 - Image 2">
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-item" data-project="project-6">
+                <img src="images/projects/project-6/thumb.jpg" alt="Project 6" class="project-thumb" style="width: 357px;">
+                <div class="project-gallery-data" style="display: none;">
+                    <img src="images/projects/project-6/01.jpg" alt="Project 6 - Image 1">
+                    <img src="images/projects/project-6/02.jpg" alt="Project 6 - Image 2">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">×</button>
+        <button class="lightbox-prev">❮</button>
+        <img id="lightboxImg" class="lightbox-img" src="" alt="Lightbox Image">
+        <button class="lightbox-next">❯</button>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
