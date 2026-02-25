@@ -1,0 +1,412 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 30px 40px;
+    background: #ffffff;
+    #border-bottom: 1px solid #f0f0f0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 0;
+    z-index: 101;
+}
+
+/* Desktop Navigation */
+.nav-desktop {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    text-decoration: none;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+/* Menu Toggle Button - TEXT */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 101;
+}
+
+.menu-toggle-text {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover .menu-toggle-text {
+    color: #666;
+}
+
+/* Mobile Menu - Dropdown */
+.mobile-menu {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    z-index: 99;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    #border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu.active {
+    max-height: 400px;
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+.mobile-nav-link {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+    color: #000;
+}
+
+/* Main Content */
+.main-content,
+.projects-main,
+.about-main,
+.contacts-main {
+    padding-top: 100px;
+    min-height: 100vh;
+    transition: padding-top 0.4s ease;
+}
+
+/* When mobile menu is active, push content down */
+body.menu-open .main-content,
+body.menu-open .projects-main,
+body.menu-open .about-main,
+body.menu-open .contacts-main {
+    padding-top: 300px;
+}
+
+/* Image Container */
+.image-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* About Page Styles */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px 40px;
+}
+
+.about-title {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 40px;
+    text-transform: lowercase;
+}
+
+.about-text {
+    margin-bottom: 50px;
+}
+
+.about-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.about-stats {
+    display: flex;
+    gap: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat-number {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-size: 48px;
+    color: #000;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+}
+
+/* Contacts Page Styles */
+.contacts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px 40px;
+}
+
+.contacts-title {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 40px;
+    text-transform: lowercase;
+}
+
+.contacts-info {
+    margin-bottom: 60px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.contact-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-value {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-value:hover {
+    color: #666;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #000;
+}
+
+/* Contact Form */
+.contact-form-section {
+    padding-top: 40px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.form-title {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 15px 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-bottom-color: #000;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #999;
+    text-transform: lowercase;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-button {
+    align-self: flex-start;
+    padding: 15px 40px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    background: #000;
+    border: none;
+    cursor: pointer;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-button:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 25px 20px;
+    }
+    
+    .nav-desktop {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .image-container,
+    .gallery-container,
+    .about-container,
+    .contacts-container {
+        padding: 0 20px 20px;
+    }
+    
+    .nav-mobile {
+        padding: 20px;
+    }
+    
+    body.menu-open .main-content,
+    body.menu-open .projects-main,
+    body.menu-open .about-main,
+    body.menu-open .contacts-main {
+        padding-top: 250px;
+    }
+    
+    .about-title,
+    .contacts-title {
+        font-size: 28px;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+}
