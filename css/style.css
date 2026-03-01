@@ -173,7 +173,7 @@ body.menu-open .contacts-main {
 }
 
 .hero-image {
-    width: 100%;
+    width: 103%;
     height: 100%;
     display: block;
     object-fit: cover;      /* Заполняет контейнер без искажений */
@@ -390,7 +390,7 @@ body.menu-open .contacts-main {
 @media (max-width: 768px) {
     .header {
         padding: 15px 20px;
-		max-width: 95%; 
+		max-width: 97%; 
     }
 	body {
 	max-width: 95%; 
