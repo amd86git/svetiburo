@@ -177,7 +177,7 @@ body.menu-open .contacts-main {
     height: 100%;
     display: block;
     object-fit: cover;      /* Заполняет контейнер без искажений */
-    object-position: center;
+    object-position: left;
     animation: kenburns 11s ease-in-out infinite alternate;
     transform-origin: center center; /* Зум строго из центра */
     will-change: transform;
@@ -188,7 +188,7 @@ body.menu-open .contacts-main {
         transform: scale(1.15) translateY(0) translateX(0); 
     }
     100% { 
-        transform: scale(1.15) translateY(30px) translateX(10px); 
+        transform: scale(1.15) translateY(30px) translateX(-10px); 
     }
 }
 
