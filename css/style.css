@@ -15,16 +15,20 @@ body {
     color: #000000;
     line-height: 1;
     overflow-x: hidden;
+	max-width: 60%;        /* Или укажите конкретную, например 1920px */
+    margin: 0 auto;         /* Центрирование сайта на экране */
 }
 
 /* Header */
 .header {
+max-width: 60%; 
+margin: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    padding: 30px 40px;
+    padding: 18px 10px;
     background: #ffffff;
     #border-bottom: 1px solid #f0f0f0;
 }
@@ -57,7 +61,7 @@ body {
 }
 
 .nav-link {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: monospace,monospace;
     font-size: 12px;
     font-weight: 400;
     color: #666;
@@ -84,7 +88,7 @@ body {
 }
 
 .menu-toggle-text {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: monospace,monospace;
     font-size: 12px;
     font-weight: 400;
     color: #000;
@@ -124,6 +128,7 @@ body {
 }
 
 .mobile-nav-link {
+	font-family: monospace,monospace;
     font-size: 14px;
     color: #666;
     text-decoration: none;
@@ -143,7 +148,7 @@ body {
 .projects-main,
 .about-main,
 .contacts-main {
-    padding-top: 100px;
+    padding-top: 60px;
     min-height: 100vh;
     transition: padding-top 0.4s ease;
 }
@@ -158,16 +163,33 @@ body.menu-open .contacts-main {
 
 /* Image Container */
 .image-container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
+    width: 100%;            /* На всю ширину экрана */
+    max-width: 100%;        /* Убираем ограничение 1600px */
+    margin: 0;              /* Убираем отступы по бокам */
+    padding: 0;             /* Убираем внутренние отступы */
+    height: 90dvh;          /* Высота остаётся 90% от viewport */
+    overflow: hidden;       /* Обрезает всё, что выходит за рамки */
+    position: relative;
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-    object-fit: cover;
+    object-fit: cover;      /* Заполняет контейнер без искажений */
+    object-position: center;
+    animation: kenburns 11s ease-in-out infinite alternate;
+    transform-origin: center center; /* Зум строго из центра */
+    will-change: transform;
+}
+
+@keyframes kenburns {
+    0% { 
+        transform: scale(1.15) translateY(0) translateX(0); 
+    }
+    100% { 
+        transform: scale(1.15) translateY(30px) translateX(10px); 
+    }
 }
 
 /* About Page Styles */
@@ -319,7 +341,7 @@ body.menu-open .contacts-main {
     width: 100%;
     padding: 15px 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #000;
     background: transparent;
     border: none;
@@ -367,8 +389,12 @@ body.menu-open .contacts-main {
 /* Responsive */
 @media (max-width: 768px) {
     .header {
-        padding: 25px 20px;
+        padding: 15px 20px;
+		max-width: 95%; 
     }
+	body {
+	max-width: 95%; 
+	}
     
     .nav-desktop {
         display: none;
