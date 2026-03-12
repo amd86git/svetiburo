@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts — SvetiDecor</title>
+	<meta name="description" content="Связаться со студией SvetiBuro" />
+	<meta property="og:title" content="SvetiBuro — Бюро декора в СПб">
+	<meta property="og:description" content="Создаём атмосферу вместо декора. Оформление свадеб и событий.">
+	<meta property="og:image" content="http://svetiburo.ru/images/logo.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://svetiburo.ru/">
+    <title>Контакты SvetiBuro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
 </head>
@@ -15,15 +21,15 @@
             
             <!-- Desktop Nav -->
             <nav class="nav-desktop">
-                <a href="index.html" class="nav-link">home</a>
-                <a href="projects.html" class="nav-link">projects</a>
-                <a href="about.html" class="nav-link">about us</a>
-                <a href="contacts.html" class="nav-link active">contacts</a>
+                <a href="index.html" class="nav-link">главная</a>
+                <a href="projects.html" class="nav-link">проекты</a>
+                <a href="about.html" class="nav-link">о нас</a>
+                <a href="contacts.html" class="nav-link active">контакты</a>
             </nav>
 
             <!-- Mobile Menu Toggle -->
             <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span class="menu-toggle-text">MENU</span>
+                <span class="menu-toggle-text">МЕНЮ</span>
             </button>
         </div>
     </header>
@@ -31,10 +37,10 @@
     <!-- Mobile Menu - Dropdown -->
     <div class="mobile-menu">
         <nav class="nav-mobile">
-            <a href="index.html" class="mobile-nav-link">home</a>
-            <a href="projects.html" class="mobile-nav-link">projects</a>
-            <a href="about.html" class="mobile-nav-link">about us</a>
-            <a href="contacts.html" class="mobile-nav-link active">contacts</a>
+            <a href="index.html" class="mobile-nav-link">главная</a>
+            <a href="projects.html" class="mobile-nav-link">проекты</a>
+            <a href="about.html" class="mobile-nav-link">о нас</a>
+            <a href="contacts.html" class="mobile-nav-link active">контакты</a>
         </nav>
     </div>
 
@@ -42,26 +48,26 @@
     <main class="contacts-main">
         <div class="contacts-container">
             <div class="contacts-content">
-                <h1 class="contacts-title">contacts</h1>
+                <h1 class="contacts-title">Контакты</h1>
                 
                 <div class="contacts-info">
                     <div class="contact-item">
-                        <span class="contact-label">email</span>
-                        <a href="mailto:info@svetidecor.com" class="contact-value">info@svetidecor.com</a>
+                        <span class="contact-label">e-mail</span>
+                        <a href="mailto:sveti.buro@gmail.com" class="contact-value">sveti.buro@gmail.com</a>
                     </div>
                     
                     <div class="contact-item">
-                        <span class="contact-label">phone</span>
-                        <a href="tel:+79991234567" class="contact-value">+7 (999) 123-45-67</a>
+                        <span class="contact-label">телефон</span>
+                        <a href="tel:+79817627599" class="contact-value">+7 (981) 762-75-99</a>
                     </div>
                     
                     <div class="contact-item">
-                        <span class="contact-label">address</span>
-                        <span class="contact-value">Москва, Россия</span>
+                        <span class="contact-label">адрес</span>
+                        <span class="contact-value">Санкт-Петербург, Россия</span>
                     </div>
                     
                     <div class="contact-item">
-                        <span class="contact-label">social</span>
+                        <span class="contact-label">соц. сети</span>
                         <div class="social-links">
                             <a href="#" class="social-link">instagram</a>
                             <a href="#" class="social-link">telegram</a>
@@ -71,17 +77,17 @@
                 </div>
 
                 <div class="contact-form-section">
-                    <h2 class="form-title">send a message</h2>
+                    <h2 class="form-title">отправить сообщение</h2>
                     <!-- Formspree Form - Updated with name attributes -->
                     <form class="contact-form" action="https://formspree.io/f/xwvnwwdl" method="POST" novalidate>
                         <div class="form-group">
-                            <input type="text" name="name" class="form-input" placeholder="your name" required>
+                            <input type="text" name="name" class="form-input" placeholder="ваше имя" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" class="form-input" placeholder="your email" required>
+                            <input type="email" name="email" class="form-input" placeholder="ваш e-mail" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-textarea" placeholder="your message" rows="5" required></textarea>
+                            <textarea name="message" class="form-textarea" placeholder="ваше сообщение" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="form-button">send</button>
                     </form>
@@ -89,7 +95,22 @@
             </div>
         </div>
     </main>
-
     <script src="js/main.js"></script>
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "LocalBusiness",
+	  "name": "SvetiBuro",
+	  "image": "http://svetiburo.ru/images/logo.png",
+	  "telephone": "+79817627599",
+	  "email": "sveti.buro@gmail.com",
+	  "address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Улица, Дом",
+		"addressLocality": "Санкт-Петербург",
+		"addressCountry": "RU"
+	  }
+	}
+	</script>
 </body>
 </html>

@@ -173,6 +173,7 @@ body.menu-open .contacts-main {
 }
 
 .hero-image {
+	position: absolute;
     width: 103%;
     height: 100%;
     display: block;
@@ -181,8 +182,30 @@ body.menu-open .contacts-main {
     animation: kenburns 11s ease-in-out infinite alternate;
     transform-origin: center center; /* Зум строго из центра */
     will-change: transform;
+	z-index: 1;
 }
-
+.hero-content {
+    position: absolute; /* Или absolute, если нужно конкретное место */
+    z-index: 2; /* Поверх картинки */
+    color: #fff; /* Белый текст */
+    #text-shadow: 0 2px 4px rgba(0,0,0,0.7); /* Тень для читаемости */
+    
+    /* Центрирование или отступы */
+    display: flex;
+    #justify-content: center;
+    #align-items: center;
+    #height: 100%;
+    #text-align: center;
+    padding: 10px;
+	bottom: 0px;
+	right: 0px;
+	text-align: right;
+}
+.hero-content h1{
+	font-family: monospace,monospace;
+	font-size: 10px;
+	font-weight: 100;
+}
 @keyframes kenburns {
     0% { 
         transform: scale(1.15) translateY(0) translateX(0); 
@@ -386,6 +409,38 @@ body.menu-open .contacts-main {
     background: #333;
 }
 
+/* Project Title */
+.project-title {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 0;
+    #text-transform: lowercase;
+    text-align: left;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.project-item:hover {
+    opacity: 0.8;
+}
+
+.project-thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header {
@@ -405,10 +460,12 @@ body.menu-open .contacts-main {
     }
     
     .image-container,
-    .gallery-container,
-    .about-container,
+    .gallery-container {
+        padding: 0px 20px 20px;
+    }
+	.about-container,
     .contacts-container {
-        padding: 0 20px 20px;
+        padding: 30px 20px 20px;
     }
     
     .nav-mobile {
