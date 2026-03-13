@@ -148,7 +148,7 @@ margin: 0 auto;
 .projects-main,
 .about-main,
 .contacts-main {
-    padding-top: 60px;
+    padding-top: 66px;
     min-height: 100vh;
     transition: padding-top 0.4s ease;
 }
@@ -234,6 +234,8 @@ body.menu-open .contacts-main {
 
 .about-text {
     margin-bottom: 50px;
+	#max-width: 800px;
+	#margin: 0 auto;
 }
 
 .about-paragraph {
@@ -639,7 +641,7 @@ body.menu-open .contacts-main {
 .card-venue {
   font-size: 11px;
   color: #999;
-  text-transform: lowercase;
+  #text-transform: lowercase;
   letter-spacing: 0.5px;
 }
 
@@ -708,5 +710,12 @@ body.menu-open .contacts-main {
   
   .review-wrapper {
     gap: 0;
+  }
+}
+
+@media (max-width: 1366px) {
+  body,
+  .header {
+    max-width: 85%; 
   }
 }
