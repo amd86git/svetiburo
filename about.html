@@ -62,10 +62,135 @@
                 <div class="about-stats">
 
                 </div>
+				<!-- Reviews / Отзывы -->
+				<section class="review-section">
+				  <h2 class="section-title">отзывы</h2>
+				  
+				  <div class="review-wrapper">
+					<!-- Стрелка влево -->
+					<button class="review-arrow review-arrow--left" aria-label="прокрутить влево">
+					  <span>←</span>
+					</button>
+					
+					<!-- Контейнер с карточками -->
+					<div class="review-scroll" id="reviewScroll">
+					  
+					  <!-- Отзыв 1 -->
+					  <article class="review-card">
+						<div class="card-meta">
+						  <span class="card-name">Анна и Михаил</span>
+						  <span class="card-venue">Санкт-Петербург, частная вилла</span>
+						</div>
+						<p class="card-text">
+						  «Хочу выразить огромную благодарность Светлане и ее команде за потрясающий декор нашей свадьбы! То, что вы сделали, превзошло все мои ожидания — все было просто невероятно красиво. Спасибо вам за ваш труд, терпение и внимание к деталям. Красота была нереальной, я просто в восторге!
+							Когда я вошла в зал, меня даже пробрало до слёз от такой красоты😍 Вы — лучший декоратор, кого я знаю! Всем буду вас рекомендовать без сомнений!
+							Спасибо ещё раз за эту сказку, которую вы создали для нас!😍♥»
+						</p>
+						<button class="card-toggle" aria-expanded="false">читать далее</button>
+					  </article>
+
+					  <!-- Отзыв 2 -->
+					  <article class="review-card">
+						<div class="card-meta">
+						  <span class="card-name">Екатерина</span>
+						  <span class="card-venue">Карелия, церемония у озера</span>
+						</div>
+						<p class="card-text">
+						  «Хочу выразить огромную благодарность Светлане и ее команде за потрясающий декор нашей свадьбы! То, что вы сделали, превзошло все мои ожидания — все было просто невероятно красиво. Спасибо вам за ваш труд, терпение и внимание к деталям. Красота была нереальной, я просто в восторге!
+							Когда я вошла в зал, меня даже пробрало до слёз от такой красоты😍 Вы — лучший декоратор, кого я знаю! Всем буду вас рекомендовать без сомнений!
+							Спасибо ещё раз за эту сказку, которую вы создали для нас!😍♥»
+						</p>
+						<button class="card-toggle" aria-expanded="false">читать далее</button>
+					  </article>
+
+					  <!-- Отзыв 3 -->
+					  <article class="review-card">
+						<div class="card-meta">
+						  <span class="card-name">Дарья и Алексей</span>
+						  <span class="card-venue">Москва, камерный ужин</span>
+						</div>
+						<p class="card-text">
+						  «Хочу выразить огромную благодарность Светлане и ее команде за потрясающий декор нашей свадьбы! То, что вы сделали, превзошло все мои ожидания — все было просто невероятно красиво. Спасибо вам за ваш труд, терпение и внимание к деталям. Красота была нереальной, я просто в восторге!
+							Когда я вошла в зал, меня даже пробрало до слёз от такой красоты😍 Вы — лучший декоратор, кого я знаю! Всем буду вас рекомендовать без сомнений!
+							Спасибо ещё раз за эту сказку, которую вы создали для нас!😍♥»
+						</p>
+						<button class="card-toggle" aria-expanded="false">читать далее</button>
+					  </article>
+
+					  <!-- Отзыв 4 -->
+					  <article class="review-card">
+						<div class="card-meta">
+						  <span class="card-name">Мария</span>
+						  <span class="card-venue">Сочи, закатная церемония</span>
+						</div>
+						<p class="card-text">
+						  «Хочу выразить огромную благодарность Светлане и ее команде за потрясающий декор нашей свадьбы! То, что вы сделали, превзошло все мои ожидания — все было просто невероятно красиво. Спасибо вам за ваш труд, терпение и внимание к деталям. Красота была нереальной, я просто в восторге!
+							Когда я вошла в зал, меня даже пробрало до слёз от такой красоты😍 Вы — лучший декоратор, кого я знаю! Всем буду вас рекомендовать без сомнений!
+							Спасибо ещё раз за эту сказку, которую вы создали для нас!😍♥»
+						</p>
+						<button class="card-toggle" aria-expanded="false">читать далее</button>
+					  </article>
+					  
+					</div>
+					
+					<!-- Стрелка вправо -->
+					<button class="review-arrow review-arrow--right" aria-label="прокрутить вправо">
+					  <span>→</span>
+					</button>
+				  </div>
+				</section>
+				
             </div>
         </div>
     </main>
 
     <script src="js/main.js"></script>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  const scrollContainer = document.getElementById('reviewScroll');
+	  const leftArrow = document.querySelector('.review-arrow--left');
+	  const rightArrow = document.querySelector('.review-arrow--right');
+	  
+	  // Функция обновления состояния стрелок
+	  function updateArrows() {
+		if (!scrollContainer) return;
+		const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+		const isAtStart = scrollLeft <= 0;
+		const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 1;
+		
+		if (leftArrow) leftArrow.disabled = isAtStart;
+		if (rightArrow) rightArrow.disabled = isAtEnd;
+	  }
+	  
+	  // Прокрутка по стрелкам
+	  if (leftArrow && rightArrow && scrollContainer) {
+		const scrollAmount = 300; // px за клик
+		
+		leftArrow.addEventListener('click', () => {
+		  scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+		});
+		
+		rightArrow.addEventListener('click', () => {
+		  scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+		});
+		
+		// Обновляем стрелки при скролле
+		scrollContainer.addEventListener('scroll', updateArrows);
+		
+		// Инициализация
+		updateArrows();
+	  }
+	  
+	  // Toggle "читать далее"
+	  document.querySelectorAll('.card-toggle').forEach(btn => {
+		btn.addEventListener('click', function() {
+		  const card = this.closest('.review-card');
+		  const isExpanded = card.classList.toggle('expanded');
+		  this.textContent = isExpanded ? 'свернуть' : 'читать далее';
+		  this.setAttribute('aria-expanded', isExpanded);
+		});
+	  });
+	});
+	</script>
 </body>
 </html>
