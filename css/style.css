@@ -716,6 +716,6 @@ body.menu-open .contacts-main {
 @media (max-width: 1366px) {
   body,
   .header {
-    max-width: 85%; 
+    max-width: 97%; 
   }
 }
